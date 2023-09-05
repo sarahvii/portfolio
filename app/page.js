@@ -1,4 +1,5 @@
 import NavBar from "@/components/NavBar"
+import Main from "@/components/Main"
 
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <div>
     <main>
         <NavBar/>
+        <Main/>
     </main>
     </div>
   )
