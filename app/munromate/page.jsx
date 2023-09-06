@@ -1,4 +1,4 @@
-import MunroMate from "./munromate"
+
 import NavBar from "@/components/NavBar"
 import Image from "next/image"
 import { RiRadioButtonFill } from 'react-icons/ri'
