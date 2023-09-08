@@ -7,28 +7,28 @@ html {
 }
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 100, 100, 100;
+  --foreground-hex: #000;
+  --background-start-hex: #008080;
+  --background-end-hex: #63a8a8;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-hex: 255, 255, 255;
+    --background-start-hex: 0, 0, 0;
+    --background-end-hex: 0, 0, 0;
   }
 }
 
 @layer base {
 body {
-  color: rgb(var(--foreground-rgb));
+  color: var(--foreground-hex);
   background: linear-gradient(
-      to bottom,
+      to top right,
       transparent,
-      rgb(var(--background-end-rgb))
+      var(--background-end-hex)
     )
-    rgb(var(--background-start-rgb));
+    var(--background-start-hex);
 
   @apply tracking-wide;
 }
@@ -53,4 +53,13 @@ button {
   @apply shadow-xl shadow-slate-400 rounded-xl uppercase bg-gradient-to-r from-[pink] to-[green] text-red-700
 }
 
+}
+
+
+.main-content {
+  padding-bottom: 1px;
+}
+
+.logo {
+  fill: white;
 }

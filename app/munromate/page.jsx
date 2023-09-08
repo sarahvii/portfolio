@@ -42,8 +42,6 @@ export default function Page() {
                 <Link href='/#projects'><p className="underline cursor-pointer">Back</p></Link>
             </div>
 
-
-
         </div>
     </>
   )

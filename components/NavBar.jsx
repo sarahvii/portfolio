@@ -26,8 +26,8 @@ const NavBar = () => {
             setLinkColor('#ecf0f3')
 
         } else {
-            setNavBg('#ecf0f3')
-            setLinkColor('#1f2937')
+            setNavBg('#000')
+            setLinkColor('#fff')
         }
     },[pathname])
     
@@ -52,7 +52,7 @@ const NavBar = () => {
     <div style={{backgroundColor: `${navBg}`}}className={shadow ? "fixed w-full h-20 shadow-xl z-[100]" : "fixed w-full h-20 z-[100]"}>
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <Link href='/'>
-        <Image src="./assets/sslogo.svg" alt="/" width={50} height={50}/>
+        <Image src="./assets/sslogo.svg" alt="/" width={50} height={50} style={{fill: 'white'}}/>
         </Link>
         <div>
             <ul style={{color: `${linkColor}`}}className="hidden md:flex">

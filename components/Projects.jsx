@@ -8,10 +8,10 @@ const Projects = () => {
 
 
   return (
-    <div id='projects' className='max-w-[1240px] mx-auto px-2 py-16'>
+    <div id='projects' className='max-w-[1240px] mx-auto px-2 py-16 bg-transparent'>
       <p className='text-xl tracking-widest upppercase text-[#565185]'>Projects</p>
       <h2 className='py-4'>What I've Built</h2>
-      <div className='grid md:grid-cols-3 gap-8'>
+      <div className='grid md:grid-cols-2 gap-8'>
 
 
     <ProjectItem title='Munro Mate' backgroundImg={hikerImg} tech='Python' projectUrl='/munromate'/>

@@ -8,7 +8,7 @@ import Contact from "@/components/Contact"
 export default function Home() {
   return (
     <div>
-    <main>
+    <main className="main-content">
         <NavBar/>
         <Main/>
         <About/>
@@ -18,4 +18,7 @@ export default function Home() {
     </main>
     </div>
   )
+
 }
+
+
