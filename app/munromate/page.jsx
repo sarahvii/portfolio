@@ -7,6 +7,7 @@ import Link from "next/link"
 
 export default function Page() {
     const hikerImg = require('/public/assets/projects/hiker.jpg');
+    const munroMate1Img = require('/public/assets/projects/munromate1.png')
 
   return (
     <>
@@ -34,8 +35,11 @@ export default function Page() {
                     <div className="p-2">
                         <p className="text-center font-bold pb-2">Technologies</p>
                         <div className="grid grid-cols-3 md:grid-cols-1">
-                            <p className='text-gray-600 py-2 flex items-center'><RiRadioButtonFill className="pr-1"/>Python</p>
-                            <p className='text-gray-600 py-2 flex items-center'><RiRadioButtonFill className="pr-1"/>Flask</p>
+                            <p className='text-gray-800 py-2 flex items-center'><RiRadioButtonFill className="pr-1"/>Python</p>
+                            <p className='text-gray-800 py-2 flex items-center'><RiRadioButtonFill className="pr-1"/>Flask</p>
+                            <p className='text-gray-800 py-2 flex items-center'><RiRadioButtonFill className="pr-1"/>PostgreSQL</p>
+                            <p className='text-gray-800 py-2 flex items-center'><RiRadioButtonFill className="pr-1"/>HTML</p>
+                            <p className='text-gray-800 py-2 flex items-center'><RiRadioButtonFill className="pr-1"/>CSS</p>
                         </div>
                     </div>
 
