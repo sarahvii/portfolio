@@ -22,7 +22,7 @@ function Contact() {
                         <div>
                             <h2 className='py-2'>Sarah Smith</h2>
                             <p>Software Developer</p>
-                            <p className='py-4'>I am available for freelance or full-time positions.  Contact me and let's talk.</p>
+                            <p className='py-4'>I am available for freelance or full-time positions.  Get in touch.</p>
                         </div>
 
 
@@ -37,9 +37,6 @@ function Contact() {
                     </div>
                     <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                         <AiOutlineMail/>
-                    </div>
-                    <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                        <BsFillPersonLinesFill/>
                     </div>
                         </div>
                     </div>

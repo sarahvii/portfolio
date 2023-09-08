@@ -6,7 +6,7 @@ const Projects = () => {
 
 
   return (
-    <div id='projects' className='mx-auto px-2 py-16 bg-black'>
+    <div id='projects' className='mx-auto px-2 py-16 bg-transparent'>
 
 
 <div className='max-w-[1240px] m-auto grid md:grid gap-8'>
