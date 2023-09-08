@@ -25,9 +25,9 @@ export default function Page() {
                 <div className="col-span-4">
                     <p>Project</p>
                     <h2>Overview</h2>
-                    <p>Some stuff about the project la di da di da.</p>
-                    <button className='px-8 py-2 mt-4 mr-8'>Demo</button>
-                    <button className="px-8 py-2 mt-4">Code</button>
+                    <Link href='https://github.com/sarahvii/phoenix-app' target='_blank' rel='noopener noreferrer'>
+                    <button className='px-8 py-2 mt-4 mr-8'>Code</button>
+                    </Link>
                 </div>
                 <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
                     <div className="p-2">
