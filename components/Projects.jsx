@@ -11,7 +11,7 @@ const Projects = () => {
 
 <div className='max-w-[1240px] m-auto grid md:grid gap-8'>
       <p className='text-xl tracking-widest uppercase text-fuchsia-300'>Projects</p>
-      <h2 className='py-4'>Things I've Built</h2>
+      <h2 className='py-4'>Things I&apos;ve Built</h2>
       </div>
 
       <div className='max-w-[1240px] m-auto grid md:grid-cols-2 gap-8'>
