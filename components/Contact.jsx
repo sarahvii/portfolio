@@ -3,13 +3,13 @@ import Link from 'next/link'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import { AiOutlineMail } from 'react-icons/ai'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
-import { HiOutlineChevronDoubleUp} from 'react-icons/hi'
+
 
 function Contact() {
   return (
     <div id="contact" className='w-full lg:h-screen bg-white'>
         <div className='max-w-[1240px] m-auto px-2 py-1 w-full'>
-            <p className='text-xl tracking-widest uppercase text-[#5651e5]'>Contact</p>
+            <p className='text-xl tracking-widest uppercase text-[#008080]'>Contact</p>
             <h2>Get In Touch</h2>
             <div className='grid lg:grid-cols-5 gap-8'>
 
@@ -77,13 +77,6 @@ function Contact() {
                         </form>
                     </div>
                     </div>    
-            </div>
-            <div className='flex justify-center py-12'>
-                <Link href='/'>
-                <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 bg-[#000]'>
-                    <HiOutlineChevronDoubleUp className='text-[#fff] bg-[#000]' size={20}/>
-                    </div>
-                </Link>
             </div>
         </div>
     </div>

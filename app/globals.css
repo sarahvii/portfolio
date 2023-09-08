@@ -50,7 +50,7 @@ li {
 }
 
 button {
-  @apply shadow-xl shadow-slate-400 rounded-xl uppercase bg-gradient-to-r from-[pink] to-[green] text-red-700
+  @apply shadow-xl shadow-slate-400 rounded-xl uppercase bg-gradient-to-r from-[--background-start-hex] to-[--background-end-hex]
 }
 
 }

@@ -3,7 +3,7 @@
 import React from 'react'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import { AiOutlineMail } from 'react-icons/ai'
-import { BsFillPersonLinesFill } from 'react-icons/bs'
+
 
 const Main = () => {
   return (
