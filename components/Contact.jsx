@@ -6,12 +6,50 @@ import { AiOutlineMail } from 'react-icons/ai'
 import { useForm, ValidationError } from "@formspree/react";
 
 
-function Contact() {
+function ContactForm({ onSubmit }) {
     const [state, handleSubmit] = useForm("mrgwkvop")
 
-    if (state.succeeded) {
-        return <p>Thanks for your message!</p>;
-    }
+    const handleFormSubmit = async (e) => {
+        e.preventDefault();
+        await handleSubmit(e);
+        onSubmit(state.succeeded);
+    };
+
+    return   (              
+    <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
+    <div className='p-4'>
+        <form onSubmit={handleFormSubmit}>
+            {/* <div className='grid md:grid-cols-2 gap-4 w-full py-2'> */}
+                <div className='flex flex-col'>
+                    <input className='border-2 rounded-lg p-3 flex border-gray-300' type='text' id='name' name='name' placeholder='name'/>
+                </div>
+                <ValidationError prefix="Email" field="email" errors={state.errors} />
+            {/* </div> */}
+            <div className='flex flex-col py-2'>
+            <input className='border-2 rounded-lg p-3 flex border-gray-300' type='text' id='email' name='email' placeholder='email'/>
+            <ValidationError prefix="Email" field="email" errors={state.errors} />
+            </div>
+            {/* <div className='flex flex-col py-2'>
+            <input className='border-2 rounded-lg p-3 flex border-gray-300' type='text' id='subject' name='subject' placeholder='subject'/>
+            </div> */}
+            <div className='flex flex-col py-2'>
+            <textarea className='border-2 rounded-lg p-3 border-gray-300' rows='10' id='message' name='message' placeholder='your message'/>
+            <ValidationError prefix="Message" field="message" errors={state.errors} />
+            </div>
+            <button className='w-full p-4 text-gray-100 mt-4'>Submit</button>
+            <ValidationError errors={state.errors} />
+        </form>
+    </div>
+    </div> 
+    )
+        }
+
+function Contact() {
+    const [formSubmitted, setFormSubmitted] = React.useState(false);
+
+    const handleFormSubmission = (succeeded) => {
+        setFormSubmitted(succeeded);
+    };
 
 
   return (
@@ -51,33 +89,13 @@ function Contact() {
                     </div>
                 </div>
                 
+                {formSubmitted ? (
+                        <p>Thanks for your message!</p>
+                    ) : (
+                        <ContactForm onSubmit={handleFormSubmission} />
+                    )}
 
-
-                <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
-                    <div className='p-4'>
-                        <form onSubmit={handleSubmit}>
-                            {/* <div className='grid md:grid-cols-2 gap-4 w-full py-2'> */}
-                                <div className='flex flex-col'>
-                                    <input className='border-2 rounded-lg p-3 flex border-gray-300' type='text' id='name' name='name' placeholder='name'/>
-                                </div>
-                                <ValidationError prefix="Email" field="email" errors={state.errors} />
-                            {/* </div> */}
-                            <div className='flex flex-col py-2'>
-                            <input className='border-2 rounded-lg p-3 flex border-gray-300' type='text' id='email' name='email' placeholder='email'/>
-                            <ValidationError prefix="Email" field="email" errors={state.errors} />
-                            </div>
-                            {/* <div className='flex flex-col py-2'>
-                            <input className='border-2 rounded-lg p-3 flex border-gray-300' type='text' id='subject' name='subject' placeholder='subject'/>
-                            </div> */}
-                            <div className='flex flex-col py-2'>
-                            <textarea className='border-2 rounded-lg p-3 border-gray-300' rows='10' id='message' name='message' placeholder='your message'/>
-                            <ValidationError prefix="Message" field="message" errors={state.errors} />
-                            </div>
-                            <button className='w-full p-4 text-gray-100 mt-4'>Submit</button>
-                            <ValidationError errors={state.errors} />
-                        </form>
-                    </div>
-                    </div>    
+   
             </div>
         </div>
     </div>
