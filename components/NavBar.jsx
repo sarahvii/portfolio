@@ -17,10 +17,10 @@ const NavBar = () => {
     const pathname = usePathname();
 
     useEffect(() => {
-        if (pathname === '/munromate' ||
+        if (pathname === '/munromate' 
+        ||
         pathname === '/phoenixtrader'
-         ||             
-
+        ||             
         pathname === '/jobshark') {
             setNavBg('transparent')
             setLinkColor('#ecf0f3')
@@ -73,7 +73,7 @@ const NavBar = () => {
                 </Link>
             </ul>
             <div onClick={handleNav} className='md:hidden'>
-                <AiOutlineMenu size={25} />
+                <AiOutlineMenu size={25} color='white' />
             </div>
         </div>
       </div>
